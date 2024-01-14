@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from "../../media/logo-stackoverflow.png"
 import SearchIcon from '@mui/icons-material/Search';
-import "./TopBar.css"
 
 export const TopBar = () => {
   return (
@@ -14,10 +13,10 @@ export const TopBar = () => {
             <input className="search-input w-full bg-[#f4f6f8] focus:outline-none" type="text" placeholder="Search" />
         </div>
         <div className="top-bar-options">
-            <ul>
-                <li className='inline ml-10 cursor-pointer hover:text-[#f6984d] font-medium'>About</li>
-                <li className='inline ml-10 cursor-pointer hover:text-[#f6984d] font-medium'>Product</li>
-                <li className='inline ml-10 cursor-pointer hover:text-[#f6984d] font-medium'>For teams</li>
+            <ul className="flex justify-center items-center gap-10">
+                <li className='cursor-pointer hover:text-[#f6984d] font-medium'>About</li>
+                <li className='cursor-pointer hover:text-[#f6984d] font-medium'>Product</li>
+                <li className='cursor-pointer hover:text-[#f6984d] font-medium'>For teams</li>
             </ul>
         </div>
     </div>
