@@ -23,7 +23,7 @@ export const MoreQuestions = ({type}) => {
                 </div>
             </div>
             <div className="single-question-container flex gap-2 items-center cursor-pointer">
-                <div className="question-counter bg-slate-200 h-8 w-8 flex justify-center items-center text-sm font-semibold bg-orange-500 text-white">
+                <div className="question-counter h-8 w-8 flex justify-center items-center text-sm font-semibold bg-orange-500 text-white">
                     12
                 </div>
                 <div className="question-text">
