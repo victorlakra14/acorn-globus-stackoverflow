@@ -19,8 +19,8 @@ export const MenuBar = () => {
     } 
 
   return (
-    <div className="menu-bar-container flex flex-col justify-between mt-10 h-[80vh] w-[25%]">
-        <div className="menu-bar-options flex pl-[105px] items-center">
+    <div className="menu-bar-container fixed flex flex-col justify-between h-[80vh] left-0">
+        <div className="menu-bar-options flex pl-[110px] items-center">
             <ul className="flex flex-col gap-7">
                 <li className="flex gap-5 items-center cursor-pointer">
                     <img src={homeIcon} alt="home-icon" className="h-5" />
@@ -76,11 +76,11 @@ export const MenuBar = () => {
             </ul>
         </div>
 
-        <div className="menu-bar-buttons flex flex-col gap-4">
-            <button className="border-2 border-[#f48024] text-[#f48024] rounded-md p-2">
+        <div className="menu-bar-buttons flex flex-col ml-[60px] justify-between items-center gap-4">
+            <button className="border-2 border-[#f48024] w-full text-[#f48024] rounded-md p-2">
                 Log in
             </button>
-            <button className="bg-[#f48024] text-white rounded-md p-2">
+            <button className="bg-[#f48024] w-full text-white rounded-md p-2">
                 Sign up
             </button>
         </div>

@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export const TopBar = () => {
   return (
-    <div className="top-bar-container grid grid-cols-4 gap-4 items-center p-4 shadow-lg">
+    <div className="top-bar-container grid grid-cols-4 gap-4 items-center p-4 shadow-lg fixed top-0 left-0 right-0 bg-white z-10">
         <div className="logo-container flex justify-center items-center">
             <img className="logo h-8" src={logo} alt="logo" />
         </div>

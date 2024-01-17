@@ -17,7 +17,7 @@ export const QuestionCard = () => {
     }
 
   return (
-    <div className="question-card-container m-10 shadow-xl rounded-b-lg">
+    <div className="question-card-container shadow-xl rounded-b-lg">
         <div className="question-detail bg-orange-500 flex justify-between items-center p-4 rounded-t-lg">
             <div className="question-text text-white font-bold font-xl">
                 <p>Visual studio code cmd error: Cannot be loaded because running scripts is disabled on this system</p>

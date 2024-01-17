@@ -3,7 +3,7 @@ import React from 'react'
 export const MoreQuestions = ({type}) => {
 
   return (
-    <div className="more-questions-container pl-10 mt-10">
+    <div className="more-questions-container pl-10">
         <h2 className="text-xl font-medium">{type}</h2>
         <div className="questions-container mt-5 flex flex-col gap-4">
             <div className="single-question-container flex gap-2 items-center cursor-pointer">
