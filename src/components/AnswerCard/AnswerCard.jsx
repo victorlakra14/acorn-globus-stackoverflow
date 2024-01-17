@@ -2,7 +2,10 @@ import React from 'react'
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 
-export const AnswerCard = () => {
+export const AnswerCard = ({data}) => {
+
+    
+
   return (
     <div className="answer-card-container shadow-md rounded-lg">
         <div className="answer-card-details flex justify-between items-center bg-slate-100 p-7 rounded-tl-lg rounded-tr-lg">

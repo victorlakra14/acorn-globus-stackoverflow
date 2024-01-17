@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const AnswerSelector = () => {
+export const AnswerSelector = ({data}) => {
 
   const [selectedAnswerOption, setSelectedAnswerOption] = useState("Votes");
 
@@ -12,7 +12,7 @@ export const AnswerSelector = () => {
     <div className="answer-selector flex justify-between items-center">
         <div>
           <p className="font-medium text-lg">
-            20 Answers
+            {data.answer_count} Answers
           </p>
         </div>
 
