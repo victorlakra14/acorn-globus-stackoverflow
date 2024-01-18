@@ -32,8 +32,9 @@ export const QuestionCard = ({data}) => {
     const lastActiveDate = convertTimestampToDate(data.last_activity_date)
 
     const formatNumber = (num) => {
+        console.log(num)
         if(num > 1000){
-            numeral(num).format('0.0a')
+            return numeral(num).format('0.0a')
         }else{
             return num
         }
@@ -63,7 +64,7 @@ export const QuestionCard = ({data}) => {
             <div className="user-detail flex gap-3 text-white font-medium items-center">
                 <Avatar alt="Ricardo Perrera" src={data.owner.profile_image} />
                 <p className="username">{data.owner.display_name}</p>
-                <div className="bg-slate-600 rounded-md">
+                <div className="bg-[#f4984f] rounded-md">
                     <p className="p-1">{data.owner.reputation}</p>
                 </div>
             </div>

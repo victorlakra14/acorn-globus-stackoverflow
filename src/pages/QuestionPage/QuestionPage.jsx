@@ -8,6 +8,7 @@ import { TopBar } from '../../components/TopBar/TopBar'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchQuestions, getQuestionsError, getQuestionsStatus, selectAllQuestions } from '../../features/questions/questionsSlice'
 import axiosInstance from '../../Axios'
+import "./QuestionPage.css"
 
 export const QuestionPage = () => {
 
@@ -16,6 +17,7 @@ export const QuestionPage = () => {
     const questionStatus = useSelector(getQuestionsStatus);
     const questionError = useSelector(getQuestionsError);
 
+    const [loading, setLoading] = useState(false);
     const [linkedQuestions, setLinkedQuestions] = useState();
     const [relatedQuestions, setRelatedQuestions] = useState();
 
@@ -44,6 +46,10 @@ export const QuestionPage = () => {
         if(questions){
             getLinkedQuestions()
             getRelatedQuestions()
+        }
+
+        if(loading){
+            setLoading(false)
         }
     }, [questionStatus, dispatch])
 
