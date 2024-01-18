@@ -31,7 +31,14 @@ export const QuestionCard = ({data}) => {
     const postDate = convertTimestampToDate(data.creation_date)
     const lastActiveDate = convertTimestampToDate(data.last_activity_date)
 
-    console.log("data", data);
+    const formatNumber = (num) => {
+        if(num > 1000){
+            numeral(num).format('0.0a')
+        }else{
+            return num
+        }
+    }
+
 
   return (
     <div className="question-card-container shadow-xl rounded-b-lg">
@@ -65,7 +72,7 @@ export const QuestionCard = ({data}) => {
                 <div className="w-[0.5px] bg-white" />
                 <p>{lastActiveDate}</p>
                 <div className="w-[0.5px] bg-white" />
-                <p>Viewed {numeral(data.view_count).format('0.0a')} times</p>
+                <p>Viewed {formatNumber(data.view_count)} times</p>
             </div>
         </div>
         <div className="question-text flex flex-col gap-4 p-4">

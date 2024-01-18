@@ -11,7 +11,7 @@ const initialState = {
 export const fetchQuestions = createAsyncThunk("questions/fetchQuestions", async () => {
 
     try {
-        const res = await axiosInstance.get("/2.3/questions?order=desc&sort=votes&site=stackoverflow&filter=!6WPIomo1fLW)M");
+        const res = await axiosInstance.get("/2.3/questions?order=asc&sort=activity&site=stackoverflow&filter=!*Mg4PjfqKi971o(H");
         return res.data.items
     } catch (err) {
         return err.message
@@ -26,8 +26,8 @@ export const questionsSlice = createSlice({
 
     },
     extraReducers(builder){
-        builder.
-        addCase(fetchQuestions.pending, (state, action) => {
+        builder
+        .addCase(fetchQuestions.pending, (state, action) => {
             state.status = "loading"
         })
         .addCase(fetchQuestions.fulfilled, (state, actions) => {
